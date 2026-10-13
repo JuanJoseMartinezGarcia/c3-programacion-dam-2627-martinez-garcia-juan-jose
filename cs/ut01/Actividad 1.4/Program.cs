@@ -1,7 +1,4 @@
-﻿Console.WriteLine("Introduce tu nombre:");
-string nombre = Console.ReadLine();
-
-int puntos = 30;
+﻿using System;
 
 Console.WriteLine("Hola " + nombre);
 Console.WriteLine("Puntos iniciales:");
