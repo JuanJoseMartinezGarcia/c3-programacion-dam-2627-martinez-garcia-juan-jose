@@ -12,7 +12,7 @@ const string CICLO = "DAM";
 const int ANYO = 1;
 
 // Guardamos el valor de PI como un número decimal.
-// const double PI = 3.1416;
+const double PI = 3.1416;
 // Variable de tipo booleano que indica si la actividad está activa.
 const bool ES_ACTIVIDAD = true;
 
