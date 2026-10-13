@@ -1,5 +1,5 @@
 double numero1 = 10;
-double numero2 = 6;
+double numero2 = 6.5;
 
 Console.WriteLine("Primer numero: " + numero1);
 Console.WriteLine("Segundo numero: " + numero2);
