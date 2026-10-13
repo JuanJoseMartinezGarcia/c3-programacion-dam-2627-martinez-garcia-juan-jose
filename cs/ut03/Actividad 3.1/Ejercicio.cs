@@ -18,5 +18,10 @@ class Program
         {
             Console.WriteLine("ERROR!");
         }
+
+        if (num1 == num2)
+        {
+            Console.WriteLine("IGUALES!");
+        }
     }
 }
