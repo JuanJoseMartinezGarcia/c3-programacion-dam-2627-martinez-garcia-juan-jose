@@ -16,7 +16,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("ERROR!");
+            Console.WriteLine($"INCORRECTO: Deberias haber indicado {num2} y {num1}");
         }
 
         if (num1 == num2)
