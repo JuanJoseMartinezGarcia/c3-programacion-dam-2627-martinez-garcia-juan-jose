@@ -14,6 +14,9 @@ class Program
         {
             Console.WriteLine("OK!");
         }
-        
+        else
+        {
+            Console.WriteLine("ERROR!");
+        }
     }
 }
