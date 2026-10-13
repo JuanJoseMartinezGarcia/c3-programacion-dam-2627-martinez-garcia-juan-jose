@@ -1,4 +1,4 @@
-double numero1 = -10;
+double numero1 = 100;
 double numero2 = 7;
 
 Console.WriteLine("Primer numero: " + numero1);
