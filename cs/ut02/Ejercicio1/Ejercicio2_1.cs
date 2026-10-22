@@ -1,4 +1,11 @@
 namespace actividad_2_1;
+
+/*
+ * using permite utilizar los tipos definidos en un espacio de nombres
+ * sin tener que escribir su nombre completo.
+ * System.Diagnostics contiene la clase Stopwatch, que permite medir
+ * el tiempo transcurrido durante la ejecución del programa.
+ */
 using System.Diagnostics;
 
 class Program
@@ -16,10 +23,9 @@ class Program
 
         cronometro.Stop(); //método Stop
 
-        // Elapsed es una propiedad, porque devuelve el tiempo transcurrido
-        // sin invocarse como un método mediante paréntesis.
+        // Elapsed es una propiedad que devuelve un objeto TimeSpan.
         TimeSpan ts = cronometro.Elapsed;
 
-        Console.WriteLine($"Has tardado {cronometro.ElapsedMilliseconds} ms");
+        Console.WriteLine($"Has tardado {ts.Seconds} segundos y {ts.Milliseconds} milisegundos");
     }
 }
