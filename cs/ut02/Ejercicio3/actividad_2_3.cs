@@ -11,4 +11,11 @@ class Persona
     {
         return nombre + " " + primerApellido + " " + segundoApellido;
     }
+
+    // Devuelve los dos apellidos y el nombre separados según el formato indicado.
+    // Ejemplo: "García López, Juan"
+    public string ObtenerApellidosYNombre()
+    {
+        return primerApellido + " " + segundoApellido + ", " + nombre;
+    }
 }
