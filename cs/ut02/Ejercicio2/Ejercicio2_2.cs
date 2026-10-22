@@ -22,9 +22,14 @@ class CuentaBancaria
     public string titular;
     public double saldo;
 
+    public void Ingresar(double cantidad)
+    {
+        saldo += cantidad;
+    }
+
     public void MostrarSaldo()
     {
-    
+        
         Console.WriteLine("Método MostrarSaldo() no implementado aún!");
     }
 }
