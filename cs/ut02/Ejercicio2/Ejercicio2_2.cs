@@ -1,3 +1,4 @@
+
 namespace actividad_2_2;
 
 class Program
@@ -34,7 +35,6 @@ class CuentaBancaria
 
     public void MostrarSaldo()
     {
-       
-        Console.WriteLine("Método MostrarSaldo() no implementado aún!");
+        Console.WriteLine($"{titular}, tienes {saldo} €");
     }
 }
