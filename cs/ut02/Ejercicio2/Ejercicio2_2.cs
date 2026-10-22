@@ -27,9 +27,14 @@ class CuentaBancaria
         saldo += cantidad;
     }
 
+    public void Retirar(double cantidad)
+    {
+        saldo -= cantidad;
+    }
+
     public void MostrarSaldo()
     {
-        
+       
         Console.WriteLine("Método MostrarSaldo() no implementado aún!");
     }
 }
