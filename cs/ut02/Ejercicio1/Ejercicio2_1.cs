@@ -9,12 +9,16 @@ class Program
         // Se declara la variable y se instancia el objeto con new.
         Stopwatch cronometro = new Stopwatch();
 
-        cronometro.Start();
+        cronometro.Start(); //método Start
 
         Console.WriteLine("Pulsa INTRO lo más rápido posible...");
         Console.ReadLine();
 
-        cronometro.Stop();
+        cronometro.Stop(); //método Stop
+
+        // Elapsed es una propiedad, porque devuelve el tiempo transcurrido
+        // sin invocarse como un método mediante paréntesis.
+        TimeSpan ts = cronometro.Elapsed;
 
         Console.WriteLine($"Has tardado {cronometro.ElapsedMilliseconds} ms");
     }
