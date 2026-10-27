@@ -7,4 +7,12 @@ class Jugador
     public Equipo equipo; // referencia al objeto "Equipo" en el que juega
     public int dorsal; //número de dorsal en el equipo
     
+    public string GetNombreCorto()
+    {
+        if (apodo == "")
+        {
+            return nombre;
+        }
+        return apodo;
+    }
 }
