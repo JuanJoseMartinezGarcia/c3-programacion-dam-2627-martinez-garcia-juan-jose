@@ -6,6 +6,6 @@ class Equipo
     public int jugadores;
     public void fichar(Jugador jugador)
     {
-        
+        jugador.equipo = this;
     }
 }
