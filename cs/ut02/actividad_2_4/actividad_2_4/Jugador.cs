@@ -15,4 +15,9 @@ class Jugador
         }
         return apodo;
     }
+
+    public string GetNombreEquipo()
+    {
+        return equipo.nombre;
+    }
 }
