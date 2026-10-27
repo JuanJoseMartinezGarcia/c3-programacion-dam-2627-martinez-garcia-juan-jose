@@ -18,6 +18,10 @@ class Jugador
 
     public string GetNombreEquipo()
     {
+        if (equipo == null)
+        {
+            return "<<sin equipo>>";
+        }
         return equipo.nombre;
     }
 }
