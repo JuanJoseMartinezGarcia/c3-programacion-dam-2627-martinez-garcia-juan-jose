@@ -6,13 +6,11 @@ class Program
     {
         Console.WriteLine("Introduzca su nueva contraseña (mínimo 8 caracteres, conteniendo letras mayúsculas y minúsculas):"); 
         string password = Console.ReadLine();
-        //PROFESOR::completa el programa para que cumpla con las especificaciones del enunciado
-       
-       if (password.Length < 8)
+
+        if (password.Length < 8)
         {
             Console.WriteLine("Demasiado corta, debe contener al menos 8 caracteres");
         }
-
         else
         {
             bool tieneMayuscula = false;
@@ -32,7 +30,17 @@ class Program
 
             if (tieneMayuscula && tieneMinuscula)
             {
-                Console.WriteLine("Contraseña válida");
+                Console.WriteLine("Repita la contraseña:");
+                string repetida = Console.ReadLine();
+
+                if (password == repetida)
+                {
+                    Console.WriteLine("Contraseña cambiada correctamente");
+                }
+                else
+                {
+                    Console.WriteLine("Las contraseñas no coinciden");
+                }
             }
             else
             {
