@@ -24,7 +24,14 @@ class Program
 
         if (num1 % 2 == 0)
         {
-            Console.WriteLine("El número es par");
+            if (num1 % 10 == 0)
+            {
+                Console.WriteLine("El número es múltiplo de diez");
+            }
+            else
+            {
+                Console.WriteLine("El número no es múltiplo de diez");
+            }
         }
         else
         {
