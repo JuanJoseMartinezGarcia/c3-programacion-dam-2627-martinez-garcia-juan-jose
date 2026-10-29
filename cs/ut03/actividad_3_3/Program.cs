@@ -8,5 +8,9 @@ class Program
         string password = Console.ReadLine();
         //PROFESOR::completa el programa para que cumpla con las especificaciones del enunciado
        
+       if (password.Length < 8)
+        {
+            Console.WriteLine("Demasiado corta, debe contener al menos 8 caracteres");
+        }
     }
 }
