@@ -11,6 +11,7 @@ class Program
         if (num1 < 0)
         {
             Console.WriteLine("El número es negativo");
+            Console.WriteLine("Su valor en positivo es: " + (-num1));
         }
         else if (num1 == 0)
         {
@@ -28,7 +29,7 @@ class Program
         else
         {
             Console.WriteLine("El número es impar");
-        }   
+        }  
     
     }
 }
