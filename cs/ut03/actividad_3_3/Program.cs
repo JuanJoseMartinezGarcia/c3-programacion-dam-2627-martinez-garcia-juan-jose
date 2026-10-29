@@ -12,5 +12,32 @@ class Program
         {
             Console.WriteLine("Demasiado corta, debe contener al menos 8 caracteres");
         }
+
+        else
+        {
+            bool tieneMayuscula = false;
+            bool tieneMinuscula = false;
+
+            foreach (char c in password)
+            {
+                if (char.IsUpper(c))
+                {
+                    tieneMayuscula = true;
+                }
+                if (char.IsLower(c))
+                {
+                    tieneMinuscula = true;
+                }
+            }
+
+            if (tieneMayuscula && tieneMinuscula)
+            {
+                Console.WriteLine("Contraseña válida");
+            }
+            else
+            {
+                Console.WriteLine("Debe contener letras mayúsculas y minúsculas");
+            }
+        }
     }
 }
