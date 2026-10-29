@@ -19,7 +19,16 @@ class Program
         else
         {
             Console.WriteLine("El número es positivo");
-        }    
+        }
+
+        if (num1 % 2 == 0)
+        {
+            Console.WriteLine("El número es par");
+        }
+        else
+        {
+            Console.WriteLine("El número es impar");
+        }   
     
     }
 }
