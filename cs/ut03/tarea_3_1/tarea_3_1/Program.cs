@@ -8,6 +8,19 @@ class Program
         Console.WriteLine("Indica una letra:");
         string letra = Console.ReadLine();
 
+        if (letra.Length>1)
+        {
+            Console.WriteLine($"No puedes indicar un texto con más de una letra");
+        }
+        else if (letra.Length=0)
+        {
+            Console.WriteLine($"No puedes dejar el texto en blanco");
+        }
+        else
+        {
+            Console.WriteLine($"Tu letra en mayúscula es {letra.ToUpper()}");
+        }
+
         //apartado c - usando un bucle for, desarrolla aquí el código que pide el enunciado:
 
         //apartado d - usando un bucle while, desarrolla aquí el código que pide el enunciado:
