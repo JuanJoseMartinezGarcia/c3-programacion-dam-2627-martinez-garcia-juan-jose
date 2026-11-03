@@ -22,6 +22,17 @@ class Program
         }
 
         //apartado c - usando un bucle for, desarrolla aquí el código que pide el enunciado:
+        Console.WriteLine("Indica un valor de porventaje para contar hacia atrás desde 100 hasta 0:");
+        int resta = Convert.ToInt32(Console.ReadLine());
+
+        for (int porcentaje=100; porcentaje<=resta; porcentaje--)
+        {
+            porcentaje = porcentaje - resta;
+
+        }
+                Console.WriteLine($"Finalizado)");
+            
+
 
         //apartado d - usando un bucle while, desarrolla aquí el código que pide el enunciado:
 
