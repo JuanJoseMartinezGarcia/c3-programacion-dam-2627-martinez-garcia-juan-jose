@@ -35,6 +35,20 @@ class Program
 
 
         //apartado d - usando un bucle while, desarrolla aquí el código que pide el enunciado:
+        
+        Console.WriteLine("Indica una palabra:");
+        string palabra = Console.ReadLine();
+       
+        while (palabra.Length>0)
+        {
+        int longitud = palabra.Length;
+        Console.WriteLine($"La longitud de la palabra es: {longitud}");
+        
+        longitud.Length = palabra + palabra;
+        
+        Console.WriteLine($"La longitud actual es{longitud.Length}");
+        }
+        
 
         //apartado e - usando un bucle do-while, desarrolla aquí el código que pide el enunciado:
 
