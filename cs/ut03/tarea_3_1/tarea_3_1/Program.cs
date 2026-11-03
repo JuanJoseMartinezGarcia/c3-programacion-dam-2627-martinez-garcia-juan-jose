@@ -52,6 +52,20 @@ class Program
 
         //apartado e - usando un bucle do-while, desarrolla aquí el código que pide el enunciado:
 
+        Console.WriteLine("Indica un numero entero");
+        int numero_e = Convert.ToInt32(Console.ReadLine());
+
+        do
+        {
+            suma_e = numero_e + numero_e;     
+        }
+        while (suma_e<=100 || numero_e=0);
+
+        final_e = suma_e - 100;
+
+        Console.WriteLine($"Sobran {final_e}");
+
+
         //apartado f - usando diferentes condicionales y bucles, con posible anidación, desarrolla aquí el código que pide el enunciado:
 
         //apartado g - usando capturas con try-catch-finally, completa aquí el código que pide el enunciado:
