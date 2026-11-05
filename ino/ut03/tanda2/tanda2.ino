@@ -3,6 +3,7 @@
 #define LEDRED 7  // Red led (brown wire)
 #define BTNINC 6  // INCrease BuTtoN on pin 6 (light green wire)
 #define SERVO_STEP 4 //2.1
+#define LED_MS_ON 1000 //2.2
 
 // Include the library for controlling servo motors
 #include <Servo.h>
@@ -49,7 +50,8 @@ void loop() // Runs continuously after setup()
     else
     {
       digitalWrite(LEDRED,HIGH);
-    
+      delay(LED_MS_ON);
+      digitalWrite(LEDRED,LOW);
 
     }  
   }
