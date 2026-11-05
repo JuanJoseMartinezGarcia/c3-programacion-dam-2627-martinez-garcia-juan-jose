@@ -1,7 +1,9 @@
  // Used pins
 #define SERVO1 3  // Servo motor on pin 3 (orange wire)
 #define LEDRED 7  // Red led (brown wire)
+#define LEDBLUE 4
 #define BTNINC 6  // INCrease BuTtoN on pin 6 (light green wire)
+#define BTNDEC 5
 #define SERVO_STEP 4 //2.1
 #define LED_MS_ON 1000 //2.2
 
@@ -60,6 +62,28 @@ void loop() // Runs continuously after setup()
 
     // Wait 20 ms to slow down the movement
     delay(10);
-  
+
+  if (!digitalRead(BTNDEC)) // If BTNONC is pressed
+  {
+    // Increase the servo position by 2 degrees
+    if (servo1Position>0)
+    {
+      servo1Position -= SERVO_STEP;
+    }
+    else
+    {
+      digitalWrite(LEDBLUE,HIGH);
+      delay(LED_MS_ON);
+      digitalWrite(LEDBLUE,LOW);
+
+    }  
+
+    // Send the new position to the servo motor
+    servoMotor1.write(servo1Position);
+
+    // Wait 20 ms to slow down the movement
+    delay(10);
+    
+  }
 }
 
