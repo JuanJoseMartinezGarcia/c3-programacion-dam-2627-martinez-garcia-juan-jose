@@ -18,5 +18,8 @@ class Program
 
         Console.WriteLine("Sumatorio: " + sumatorio);
         Console.WriteLine("Cantidad de números: " + contador);
+
+        double media = (double)sumatorio / contador;
+        Console.WriteLine("Valor medio: " + media);
     }
 }
