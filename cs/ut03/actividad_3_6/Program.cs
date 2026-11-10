@@ -14,5 +14,8 @@ class Program
             sumatorio += i;
             factorial *= i;
         }
+
+        Console.WriteLine("Sumatorio: " + sumatorio);
+        Console.WriteLine("Factorial: " + factorial);
     }
 }
