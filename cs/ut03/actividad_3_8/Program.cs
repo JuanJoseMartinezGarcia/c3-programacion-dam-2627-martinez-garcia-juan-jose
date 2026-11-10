@@ -14,12 +14,13 @@ class Program
         {
             Console.WriteLine($"Los divisores de {numero} son:");
             int test_divisor = numero;
-            /* PROFESOR::usando un bucle while, completa el programa para que en cada paso reste 1 a test_divisor
-               y compruebe si test_divisor es divisor del número introducido. Si lo es, muéstralo por pantalla.
-               El bucle debe terminar cuando test_divisor sea igual a 2, ya que el 1 divide a cualquiera y no se considera un divisor propio.
-            */
+
             while (test_divisor >= 2)
             {
+                if (numero % test_divisor == 0)
+                {
+                    Console.WriteLine($"El número {test_divisor} es divisor de {numero}");
+                }
                 test_divisor--;
             }
         }
