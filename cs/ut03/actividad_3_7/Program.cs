@@ -11,6 +11,7 @@ class Program
 
         while (numero > 0)
         {
+            sumatorio += numero;
             numero = Convert.ToInt32(Console.ReadLine());
         }
 
