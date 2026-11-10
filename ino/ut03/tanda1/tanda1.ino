@@ -2,8 +2,11 @@
 #define LEDA 3 // led amarillo
 #define LEDV 2 // led verde
 #define BTN1 7 // botón de pulsación
-#define TAMARILLO 1000 // tiempo en amarillo
+#define TPARPADEO 500 // tiempo de parpadeo del amarillo
+#define TAMARILLO 1000 // tiempo en amarillo fijo
 #define TROJO 3000 // tiempo en rojo
+
+bool estadoAmarillo = LOW; // estado actual del led amarillo
 
 void setup() //Método que se ejecuta al inicio
 {
@@ -15,24 +18,29 @@ void setup() //Método que se ejecuta al inicio
   //Entrada para botón
   pinMode(BTN1, INPUT);
 
-  //Semáforo en verde inicialmente
+  //Apagar todos leds inicialmente
   digitalWrite(LEDR,LOW);
   digitalWrite(LEDA,LOW);
-  digitalWrite(LEDV,HIGH);
+  digitalWrite(LEDV,LOW);
 }
 
 void loop() // Método que se ejecuta en bucle
 {
   if (digitalRead(BTN1))
   {
-    digitalWrite(LEDV, LOW);
     digitalWrite(LEDA, HIGH);
     delay(TAMARILLO);
     digitalWrite(LEDA, LOW);
     digitalWrite(LEDR, HIGH);
     delay(TROJO);
     digitalWrite(LEDR, LOW);
-    digitalWrite(LEDV, HIGH);
+    estadoAmarillo = LOW;
+  }
+  else
+  {
+    estadoAmarillo = !estadoAmarillo;
+    digitalWrite(LEDA, estadoAmarillo);
+    delay(TPARPADEO);
   }
   
 }
