@@ -8,6 +8,10 @@ class Program
         int limite_maximo = Convert.ToInt32(Console.ReadLine());
         long sumatorio=0;
         long factorial=1;
-        //PROFESOR::usando un bucle for, completa el programa para que calcule el sumatorio y el factorial del número introducido y los muestre por pantalla
+
+        for (int i = 1; i <= limite_maximo; i++)
+        {
+            sumatorio += i;
+        }
     }
 }
