@@ -8,6 +8,10 @@ class Program
         string palabra = Console.ReadLine();
         Console.WriteLine("Introduce un número de repeticiones:");
         int repeticiones = int.Parse(Console.ReadLine());
-        //PROFESOR::completa el programa para que cumpla con las especificaciones del enunciado
+
+        for (int i = 0; i < repeticiones; i++)
+        {
+            Console.WriteLine(palabra);
+        }
     }
 }
