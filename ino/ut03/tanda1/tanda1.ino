@@ -24,16 +24,20 @@ void loop() // Método que se ejecuta en bucle
 {
   if (digitalRead(BTN1))
   {
-    for (int i=0;i<5;i++)
+    for (int i=0;i<4;i++)
     {
-      digitalWrite(LEDR, HIGH);
       digitalWrite(LEDV, LOW);
+      digitalWrite(LEDR, HIGH);
       delay(TCONM);
       digitalWrite(LEDR, LOW);
+      digitalWrite(LEDA, HIGH);
+      delay(TCONM);
+      digitalWrite(LEDA, LOW);
       digitalWrite(LEDV, HIGH);
       delay(TCONM);
     }
     digitalWrite(LEDR, LOW);
+    digitalWrite(LEDA, LOW);
     digitalWrite(LEDV, LOW);
   }
   
