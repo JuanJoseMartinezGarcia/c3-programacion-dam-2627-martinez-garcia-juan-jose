@@ -12,6 +12,7 @@ class Program
         for (int i = 1; i <= limite_maximo; i++)
         {
             sumatorio += i;
+            factorial *= i;
         }
     }
 }
