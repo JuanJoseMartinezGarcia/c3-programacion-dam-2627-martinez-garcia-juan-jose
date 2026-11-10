@@ -5,9 +5,12 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Voy a mostrarte la tabla de multiplicar del número que me digas!");
-        int numero = int.Parse(Console.ReadLine());
 
-        if (numero >= 1 && numero <= 10)
+        if (!int.TryParse(Console.ReadLine(), out int numero))
+        {
+            Console.WriteLine("Debes introducir un número válido");
+        }
+        else if (numero >= 1 && numero <= 10)
         {
             for (int i = 1; i <= 10; i++)
             {
