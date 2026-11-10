@@ -20,6 +20,6 @@ class Program
         Console.WriteLine("Cantidad de números: " + contador);
 
         double media = (double)sumatorio / contador;
-        Console.WriteLine("Valor medio: " + media);
+        Console.WriteLine("Valor medio: " + Math.Round(media, 4));
     }
 }
