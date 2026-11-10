@@ -4,10 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
+        const int NUMERO_MIN = 2;
+        const int NUMERO_MAX = 10000;
+
         Console.WriteLine("Selecciona un número positivo (no mayor de 10000) y yo te diré sus divisores:");
         int numero = int.Parse(Console.ReadLine());
 
-        if (numero >= 2 && numero <= 10000)
+        if (numero >= NUMERO_MIN && numero <= NUMERO_MAX)
         {
             Console.WriteLine($"Los divisores de {numero} son:");
             int test_divisor = numero;
