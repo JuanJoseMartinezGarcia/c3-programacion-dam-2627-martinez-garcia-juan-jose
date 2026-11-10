@@ -10,6 +10,7 @@ class Program
         const string RATING_3 = "regulero";
         const string RATING_4 = "interesante";
         const string RATING_5 = "maravilloso";
+        const string RATING_ERROR = "Debes indicar un valor entre 1 y 5 (incluidos)";
 
         Console.WriteLine("Califica tu experiencia con el curso (1-5):");
         int calificacion = Convert.ToInt32(Console.ReadLine());
@@ -33,6 +34,9 @@ class Program
             case 5:
                 valoracion = RATING_5;
                 break;
+            default:
+                Console.WriteLine(RATING_ERROR);
+                return;
         }
 
         Console.WriteLine(RATING_TEXT + valoracion);
