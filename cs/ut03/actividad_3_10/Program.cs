@@ -6,6 +6,11 @@ class Program
     {
         Console.WriteLine("Escribe una palabra y yo me encargaré de acortarla hasta que quede en nada:");
         string palabra = Console.ReadLine();
-        //PROFESOR::usa un bucle do-while para cumplir con el enunciado
+
+        do
+        {
+            palabra = palabra.Substring(0, palabra.Length - 1);
+            Console.WriteLine(palabra);
+        } while (palabra.Length > 0);
     }
 }
