@@ -12,9 +12,11 @@ class Program
         while (numero > 0)
         {
             sumatorio += numero;
+            contador++;
             numero = Convert.ToInt32(Console.ReadLine());
         }
 
         Console.WriteLine("Sumatorio: " + sumatorio);
+        Console.WriteLine("Cantidad de números: " + contador);
     }
 }
