@@ -11,7 +11,13 @@ class Program
 
         for (int i = 0; i < repeticiones; i++)
         {
-            Console.Write(palabra + ",");
+            Console.Write(palabra);
+            if (i < repeticiones - 1)
+            {
+                Console.Write(",");
+            }
         }
+
+        Console.WriteLine();
     }
 }
