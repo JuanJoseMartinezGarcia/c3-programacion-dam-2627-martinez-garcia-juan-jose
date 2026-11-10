@@ -2,7 +2,8 @@
 #define LEDA 3 // led amarillo
 #define LEDV 2 // led verde
 #define BTN1 7 // botón de pulsación
-#define TCONM 250 // tiempo de conmutación
+#define TAMARILLO 1000 // tiempo en amarillo
+#define TROJO 3000 // tiempo en rojo
 
 void setup() //Método que se ejecuta al inicio
 {
@@ -14,31 +15,24 @@ void setup() //Método que se ejecuta al inicio
   //Entrada para botón
   pinMode(BTN1, INPUT);
 
-  //Apagar todos leds inicialmente
+  //Semáforo en verde inicialmente
   digitalWrite(LEDR,LOW);
   digitalWrite(LEDA,LOW);
-  digitalWrite(LEDV,LOW);
+  digitalWrite(LEDV,HIGH);
 }
 
 void loop() // Método que se ejecuta en bucle
 {
   if (digitalRead(BTN1))
   {
-    for (int i=0;i<4;i++)
-    {
-      digitalWrite(LEDV, LOW);
-      digitalWrite(LEDR, HIGH);
-      delay(TCONM);
-      digitalWrite(LEDR, LOW);
-      digitalWrite(LEDA, HIGH);
-      delay(TCONM);
-      digitalWrite(LEDA, LOW);
-      digitalWrite(LEDV, HIGH);
-      delay(TCONM);
-    }
-    digitalWrite(LEDR, LOW);
-    digitalWrite(LEDA, LOW);
     digitalWrite(LEDV, LOW);
+    digitalWrite(LEDA, HIGH);
+    delay(TAMARILLO);
+    digitalWrite(LEDA, LOW);
+    digitalWrite(LEDR, HIGH);
+    delay(TROJO);
+    digitalWrite(LEDR, LOW);
+    digitalWrite(LEDV, HIGH);
   }
   
 }
