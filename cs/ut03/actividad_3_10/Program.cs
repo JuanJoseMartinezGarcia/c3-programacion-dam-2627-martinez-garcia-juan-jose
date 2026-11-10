@@ -9,8 +9,8 @@ class Program
 
         do
         {
-            palabra = palabra.Substring(0, palabra.Length - 1);
+            palabra = palabra.Substring(1, palabra.Length - 2);
             Console.WriteLine(palabra);
-        } while (palabra.Length > 0);
+        } while (palabra.Length >= 2);
     }
 }
