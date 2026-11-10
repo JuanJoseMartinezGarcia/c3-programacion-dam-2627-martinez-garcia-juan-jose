@@ -13,5 +13,7 @@ class Program
         {
             numero = Convert.ToInt32(Console.ReadLine());
         }
+
+        Console.WriteLine("Sumatorio: " + sumatorio);
     }
 }
