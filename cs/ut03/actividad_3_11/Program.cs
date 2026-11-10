@@ -6,20 +6,28 @@ class Program
     {
         Console.WriteLine("Voy a mostrarte la tabla de multiplicar del número que me digas!");
 
-        if (!int.TryParse(Console.ReadLine(), out int numero))
+        int numero;
+        bool valido = false;
+
+        do
         {
-            Console.WriteLine("Debes introducir un número válido");
-        }
-        else if (numero >= 1 && numero <= 10)
-        {
-            for (int i = 1; i <= 10; i++)
+            if (!int.TryParse(Console.ReadLine(), out numero))
             {
-                Console.WriteLine($"{numero} x {i} = {numero * i}");
+                Console.WriteLine("Debes introducir un número válido");
             }
-        }
-        else
+            else if (numero < 1 || numero > 10)
+            {
+                Console.WriteLine("El número indicado debe estar entre 1 y 10");
+            }
+            else
+            {
+                valido = true;
+            }
+        } while (!valido);
+
+        for (int i = 1; i <= 10; i++)
         {
-            Console.WriteLine("El número indicado debe estar entre 1 y 10");
+            Console.WriteLine($"{numero} x {i} = {numero * i}");
         }
     }
 }
