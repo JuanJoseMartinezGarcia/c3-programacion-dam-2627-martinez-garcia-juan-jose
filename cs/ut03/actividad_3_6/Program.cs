@@ -9,7 +9,10 @@ class Program
         long sumatorio=0;
         long factorial=1;
 
-        for (int i = 1; i <= limite_maximo; i++)
+        Console.WriteLine($"Introduce el entero base para el cálculo, entre 1 y {limite_maximo}");
+        int entero_base = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = entero_base; i <= limite_maximo; i++)
         {
             sumatorio += i;
             factorial *= i;
