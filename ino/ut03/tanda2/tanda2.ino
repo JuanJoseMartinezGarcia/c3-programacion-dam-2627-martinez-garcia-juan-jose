@@ -42,48 +42,29 @@ void loop() // Runs continuously after setup()
 {
   delay(10); // Prevents the simulator from being overloaded
 
-  if (!digitalRead(BTNINC)) // If BTNINC is pressed
-  {
-    // Increase the servo position by 2 degrees
-    if (servo1Position<180)
-    {
-      servo1Position += SERVO_STEP;
-    }
-    else
-    {
-      digitalWrite(LEDRED,HIGH);
-      delay(LED_MS_ON);
-      digitalWrite(LEDRED,LOW);
-
-    }  
-  }
-    // Send the new position to the servo motor
-    servoMotor1.write(servo1Position);
-
-    // Wait 20 ms to slow down the movement
-    delay(10);
-
-  if (!digitalRead(BTNDEC)) // If BTNONC is pressed
-  {
-    // Increase the servo position by 2 degrees
-    if (servo1Position>0)
-    {
-      servo1Position -= SERVO_STEP;
-    }
-    else
-    {
-      digitalWrite(LEDBLUE,HIGH);
-      delay(LED_MS_ON);
-      digitalWrite(LEDBLUE,LOW);
-
-    }  
-
-    // Send the new position to the servo motor
-    servoMotor1.write(servo1Position);
-
-    // Wait 20 ms to slow down the movement
-    delay(10);
-    
-  }
+  CheckButton(BTNINC, LEDRED, 1);
+  CheckButton(BTNDEC, LEDBLUE, -1);
 }
 
+void CheckButton(byte button, byte led, int sign)
+{
+  if (!digitalRead(button))
+  {
+    if ((sign > 0 && servo1Position < 180) || (sign < 0 && servo1Position > 0))
+    {
+      servo1Position += sign * SERVO_STEP;
+    }
+    else
+    {
+      digitalWrite(led,HIGH);
+      delay(LED_MS_ON);
+      digitalWrite(led,LOW);
+    }
+
+    // Send the new position to the servo motor
+    servoMotor1.write(servo1Position);
+
+    // Wait 20 ms to slow down the movement
+    delay(10);
+  }
+}
