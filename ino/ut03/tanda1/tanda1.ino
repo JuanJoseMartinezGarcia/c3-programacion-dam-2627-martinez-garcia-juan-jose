@@ -2,6 +2,7 @@
 #define LEDA 3 // led amarillo
 #define LEDV 2 // led verde
 #define BTN1 7 // botón de pulsación
+#define TCONM 250 // tiempo de conmutación
 
 void setup() //Método que se ejecuta al inicio
 {
@@ -26,10 +27,14 @@ void loop() // Método que se ejecuta en bucle
     for (int i=0;i<5;i++)
     {
       digitalWrite(LEDR, HIGH);
-      delay(300);
+      digitalWrite(LEDV, LOW);
+      delay(TCONM);
       digitalWrite(LEDR, LOW);
-      delay(300);
+      digitalWrite(LEDV, HIGH);
+      delay(TCONM);
     }
+    digitalWrite(LEDR, LOW);
+    digitalWrite(LEDV, LOW);
   }
   
 }
