@@ -14,15 +14,19 @@ class Program
         {
             Console.WriteLine($"Los divisores de {numero} son:");
             int test_divisor = numero;
+            int contador_divisores = 0;
 
             while (test_divisor >= 2)
             {
                 if (numero % test_divisor == 0)
                 {
                     Console.WriteLine($"El número {test_divisor} es divisor de {numero}");
+                    contador_divisores++;
                 }
                 test_divisor--;
             }
+
+            Console.WriteLine($"Se han encontrado {contador_divisores} divisores");
         }
         else
         {
